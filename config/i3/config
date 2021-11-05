@@ -39,7 +39,7 @@ set $myTerm st
 bindsym $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start program launcher
 bindsym $mod+Shift+Return exec --no-startup-id dmenu_run
@@ -141,7 +141,6 @@ bindsym $mod+Shift+b move container to workspace back_and_forth; workspace back_
 # split orientation
 bindsym $mod+z split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -255,6 +254,7 @@ for_window [urgent=latest] focus
 
 # reload the configuration file
 bindsym $mod+Ctrl+r reload
+bindsum $mod+Shift+e exec i3-msg exit
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
@@ -419,3 +419,14 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym $mod+d exec rofi -show run
+
