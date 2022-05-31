@@ -1,0 +1,24 @@
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias ls='ls --color=auto'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias javkill='bash ~/.scripts/kill.sh'
+alias S="paru -S"
+alias upt="paru -Syu"
+alias R="paru -R"
+alias Q="paru -Q | less"
+alias Ss="S --removemake --nodiffmenu --useask"
+alias temp="bash ~/.scripts/temps.sh"
+alias vim=nvim
+alias rofi="rofi -modi drun,window,windowcd,run,ssh,combi,keys,filebrowser"
+alias rcedit="bash ~/.scripts/rc.sh"
+alias mkdir="mkdir -pv"
+alias coding="code ~/Documents/coding"
+alias mcr="java -jar ~/Desktop/minecraft.jar && exit"
+alias open="xdg-open"
+alias ddg="/usr/bin/duckduckgo"
